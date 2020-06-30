@@ -29,6 +29,7 @@ type Action interface{
     Version() semver.Version
     Help() string
     Execute(Request) Response // TODO
+    Schema() string // OpenAPI Schema
 }
 
 type Request interface{
@@ -53,5 +54,6 @@ type Reporter interface {
   Version() semver.Version
   Help() string
   Execute(Request) Response
+  Schema() string // OpenAPI Schema
 }
 ```
